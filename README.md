@@ -23,10 +23,11 @@ src/main/
 │       ├── model/     # Classes de modelo
 │       ├── service/   # Camada de serviço
 │       └── util/      # Classes utilitárias
+├── resources/
+│   └── struts.xml     # Configuração do Struts 2
 └── webapp/
     ├── WEB-INF/
-    │   ├── web.xml    # Configuração do servlet
-    │   └── struts.xml # Configuração do Struts 2
+    │   └── web.xml    # Configuração do servlet
     └── *.jsp          # Páginas JSP
 ```
 
