@@ -25,7 +25,8 @@ src/main/
 │       └── util/      # Classes utilitárias
 └── webapp/
     ├── WEB-INF/
-    │   └── web.xml    # Configuração do servlet
+    │   ├── web.xml    # Configuração do servlet
+    │   └── struts.xml # Configuração do Struts 2
     └── *.jsp          # Páginas JSP
 ```
 
