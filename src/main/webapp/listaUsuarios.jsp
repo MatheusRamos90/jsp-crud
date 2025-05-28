@@ -11,7 +11,7 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Lista de Usuários</h2>
-            <s:a href="usuario-novo" cssClass="btn btn-primary">Novo Usuário</s:a>
+            <s:a href="novoUsuario" cssClass="btn btn-primary">Novo Usuário</s:a>
         </div>
         
         <div class="table-responsive">
@@ -29,8 +29,8 @@
                             <td><s:property value="nome" /></td>
                             <td><s:property value="email" /></td>
                             <td>
-                                <s:a href="usuario-editar?id=%{id}" cssClass="btn btn-sm btn-warning">Editar</s:a>
-                                <s:a href="usuario-excluir?id=%{id}" cssClass="btn btn-sm btn-danger" 
+                                <s:a href="editarUsuario?id=%{id}" cssClass="btn btn-sm btn-warning">Editar</s:a>
+                                <s:a href="excluirUsuario?id=%{id}" cssClass="btn btn-sm btn-danger"
                                      onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</s:a>
                             </td>
                         </tr>

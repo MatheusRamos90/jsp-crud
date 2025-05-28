@@ -45,7 +45,7 @@
     
     <div class="container">
         <!-- Messages will be included here -->
-        <jsp:include page="/WEB-INF/jsp/includes/mensagens.jsp"/>
+        <jsp:include page="/includes/mensagens.jsp"/>
     </div>
 </body>
 </html> 

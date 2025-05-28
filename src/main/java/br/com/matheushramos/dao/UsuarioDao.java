@@ -3,7 +3,10 @@ package br.com.matheushramos.dao;
 import br.com.matheushramos.model.Usuario;
 import br.com.matheushramos.util.ConnectionFactory;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +24,9 @@ public class UsuarioDao {
                 usuarios.add(mapearUsuario(rs));
             }
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao listar usuários", e);
+            String mensagem = "Erro ao listar usuários";
+//            log.error(mensagem, e);
+            throw new RuntimeException(mensagem, e);
         }
         
         return usuarios;

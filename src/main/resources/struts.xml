@@ -9,7 +9,7 @@
     <package name="default" extends="struts-default">
         <!-- Global Results -->
         <global-results>
-            <result name="error">/WEB-INF/jsp/error/500.jsp</result>
+            <result name="error">/error/500.jsp</result>
         </global-results>
 
         <!-- Global Exception Mappings -->
@@ -19,20 +19,20 @@
 
         <!-- Usuario Actions -->
         <action name="listarUsuarios" class="br.com.matheushramos.action.UsuarioAction" method="listar">
-            <result name="success">/WEB-INF/jsp/listaUsuarios.jsp</result>
+            <result name="success">/listaUsuarios.jsp</result>
         </action>
 
         <action name="novoUsuario" class="br.com.matheushramos.action.UsuarioAction" method="novo">
-            <result name="success">/WEB-INF/jsp/cadastroUsuario.jsp</result>
+            <result name="success">/cadastroUsuario.jsp</result>
         </action>
 
         <action name="salvarUsuario" class="br.com.matheushramos.action.UsuarioAction" method="salvar">
             <result name="success" type="redirectAction">listarUsuarios</result>
-            <result name="input">/WEB-INF/jsp/cadastroUsuario.jsp</result>
+            <result name="input">/cadastroUsuario.jsp</result>
         </action>
 
         <action name="editarUsuario" class="br.com.matheushramos.action.UsuarioAction" method="editar">
-            <result name="success">/WEB-INF/jsp/cadastroUsuario.jsp</result>
+            <result name="success">/cadastroUsuario.jsp</result>
         </action>
 
         <action name="excluirUsuario" class="br.com.matheushramos.action.UsuarioAction" method="excluir">

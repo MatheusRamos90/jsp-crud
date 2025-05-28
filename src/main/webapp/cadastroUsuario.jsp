@@ -11,15 +11,15 @@
     <div class="container mt-5">
         <h2><s:if test="usuario.id == null">Novo Usuário</s:if><s:else>Editar Usuário</s:else></h2>
         
-        <s:form action="usuario-salvar" method="post" cssClass="mt-4">
+        <s:form action="salvarUsuario" method="post" cssClass="mt-4">
             <s:hidden name="usuario.id" />
             
             <div class="mb-3">
-                <s:textfield name="usuario.nome" label="Nome" cssClass="form-control" required="true" />
+                <s:textfield name="usuario.nome" label="Nome" placeholder="Nome" cssClass="form-control" required="true" />
             </div>
             
             <div class="mb-3">
-                <s:textfield name="usuario.email" label="Email" cssClass="form-control" required="true" />
+                <s:textfield name="usuario.email" label="Email" placeholder="Email" cssClass="form-control" required="true" />
             </div>
             
             <div class="mt-4">

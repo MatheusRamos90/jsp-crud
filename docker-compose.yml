@@ -4,6 +4,7 @@ services:
   postgres:
     image: postgres:12
     container_name: jsp-studies-db
+    restart: always
     environment:
       POSTGRES_DB: jsp-studies
       POSTGRES_USER: postgres
