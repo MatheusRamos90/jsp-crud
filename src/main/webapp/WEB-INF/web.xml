@@ -7,6 +7,19 @@
 
     <display-name>JSP CRUD</display-name>
 
+    <!-- Atividade Usuario Filter -->
+    <filter>
+        <filter-name>atividadeUsuarioFilter</filter-name>
+        <filter-class>br.com.matheushramos.filter.AtividadeUsuarioFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>atividadeUsuarioFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+
     <!-- Struts 2 Filter -->
     <filter>
         <filter-name>struts2</filter-name>
@@ -15,8 +28,25 @@
 
     <filter-mapping>
         <filter-name>struts2</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>*.action</url-pattern>
+        <url-pattern>/listarUsuarios</url-pattern>
+        <url-pattern>/novoUsuario</url-pattern>
+        <url-pattern>/editarUsuario</url-pattern>
+        <url-pattern>/excluirUsuario</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+
+    <!-- Gerar Relatorio PDF Servlet -->
+    <servlet>
+        <servlet-name>gerarRelatorioPDFServlet</servlet-name>
+        <servlet-class>br.com.matheushramos.servlet.GerarRelatorioPDFServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>gerarRelatorioPDFServlet</servlet-name>
+        <url-pattern>/gerarRelatorioPDF</url-pattern>
+    </servlet-mapping>
 
     <!-- Welcome File List -->
     <welcome-file-list>

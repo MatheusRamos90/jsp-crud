@@ -24,7 +24,7 @@
             
             <div class="mt-4">
                 <s:submit value="Salvar" cssClass="btn btn-primary" />
-                <s:a href="usuario" cssClass="btn btn-secondary">Voltar</s:a>
+                <s:a href="listarUsuarios" cssClass="btn btn-secondary">Voltar</s:a>
             </div>
         </s:form>
     </div>
