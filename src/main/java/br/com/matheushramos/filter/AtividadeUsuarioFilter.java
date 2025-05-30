@@ -36,7 +36,7 @@ public class AtividadeUsuarioFilter implements Filter {
             } else {
                 RelatorioAtividadeManager.incrementarCadastros(request.getServletContext());
             }
-        } else if (method.equals("POST") && servletPath.equals("/excluirUsuario")) {
+        } else if (method.equals("GET") && servletPath.equals("/excluirUsuario")) {
             RelatorioAtividadeManager.incrementarRemocoes(request.getServletContext());
         }
     }

@@ -4,11 +4,17 @@ Este é um sistema CRUD (Create, Read, Update, Delete) desenvolvido em Java util
 
 ## Tecnologias Utilizadas
 
-- Java
+- Java 8
 - JSP (JavaServer Pages)
 - Struts 2
-- MySQL (Banco de Dados)
+- PostgreSQL (Banco de Dados)
 - Maven (Gerenciamento de Dependências)
+- Docker (Containerização do Banco de Dados)
+- Lombok (Redução de código boilerplate)
+- JUnit 5 (Testes unitários)
+- Gson (Manipulação de JSON)
+- iText (Geração de PDF)
+- SLF4J (Logging)
 
 ## Estrutura do Projeto
 
@@ -38,6 +44,8 @@ src/main/
 - Edição de usuários existentes
 - Exclusão de usuários
 - Visualização detalhada de usuários
+- Geração de relatórios em PDF
+- Exportação de dados em JSON
 
 ## Modelo de Dados
 
@@ -49,17 +57,16 @@ O sistema trabalha com a entidade Usuário que possui os seguintes atributos:
 ## Como Executar
 
 1. Clone o repositório
-2. Configure o banco de dados MySQL
-3. Execute o projeto em um servidor Java EE (como Tomcat)
+2. Inicie o banco de dados PostgreSQL usando Docker (docker-compose.yml):
+   ```bash
+   docker-compose up -d
+   ```
+3. Execute o projeto em um servidor Java EE (Tomcat 9)
 4. Acesse a aplicação através do navegador
 
 ## Requisitos
 
-- Java JDK 8 ou superior
+- Java JDK 8
 - Maven 3.x
-- MySQL 5.7 ou superior
+- Docker e Docker Compose
 - Servidor Java EE (Tomcat 8.x ou superior)
-
-## Configuração do Banco de Dados
-
-- Crie as tabelas necessárias antes de subir a aplicação, os scripts estão em ```src\main\resources\schema.sql```
