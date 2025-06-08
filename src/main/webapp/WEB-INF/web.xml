@@ -48,6 +48,17 @@
         <url-pattern>/gerarRelatorioPDF</url-pattern>
     </servlet-mapping>
 
+    <!-- Buscar Jogos Usuario Servlet -->
+    <servlet>
+        <servlet-name>buscarJogosUsuarioServlet</servlet-name>
+        <servlet-class>br.com.matheushramos.servlet.BuscarJogosUsuarioServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>buscarJogosUsuarioServlet</servlet-name>
+        <url-pattern>/buscarJogosUsuario</url-pattern>
+    </servlet-mapping>
+
     <!-- Welcome File List -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

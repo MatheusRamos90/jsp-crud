@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plataformaJogos>
+    <id_consumo>12345</id_consumo>
+    <usuario>
+        <id>17</id>
+        <jogos>
+            <jogo>
+                <id>1001</id>
+                <nome>God of War Ragnarok</nome>
+            </jogo>
+            <jogo>
+                <id>1002</id>
+                <nome>Red Dead Redemption 2</nome>
+            </jogo>
+            <jogo>
+                <id>1003</id>
+                <nome>The Last of Us Part II</nome>
+            </jogo>
+            <jogo>
+                <id>1004</id>
+                <nome>Elden Ring</nome>
+            </jogo>
+            <jogo>
+                <id>1005</id>
+                <nome>Cyberpunk 2077</nome>
+            </jogo>
+        </jogos>
+    </usuario>
+</plataformaJogos> 

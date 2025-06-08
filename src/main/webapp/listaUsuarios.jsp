@@ -10,10 +10,12 @@
 </head>
 <body>
     <div class="container mt-5">
+        <input type="hidden" id="idUsuario" value="${id}" />
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Lista de Usuários</h2>
             <div>
                 <button onclick="gerarRelatorioPDF()" class="btn btn-info me-2 text-white">Gerar Relatório PDF</button>
+                <button id="btnBuscarJogos" class="btn btn-success me-2">Buscar Jogos</button>
                 <s:a href="novoUsuario" cssClass="btn btn-primary">Novo Usuário</s:a>
             </div>
         </div>
@@ -33,6 +35,7 @@
                             <td><s:property value="nome" /></td>
                             <td><s:property value="email" /></td>
                             <td>
+                                <input type="hidden" name="id" value="<s:property value='id'/>" />
                                 <s:a href="editarUsuario?id=%{id}" cssClass="btn btn-sm btn-warning">Editar</s:a>
                                 <s:a href="excluirUsuario?id=%{id}" cssClass="btn btn-sm btn-danger"
                                      onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</s:a>
@@ -50,5 +53,6 @@
         const contextPath = '${pageContext.request.contextPath}';
     </script>
     <script src="${pageContext.request.contextPath}/js/listaUsuarios.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jogos.js"></script>
 </body>
 </html> 

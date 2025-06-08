@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="830477bd-d212-4799-94bc-f94a7fb565af" activeEnvironment="Default" name="PlataformaJogos" resourceRoot="" soapui-version="5.8.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:restMockService id="47dcb01a-9823-48b6-bd69-a34d950ccb33" port="8585" path="/" host="DESKTOP-1MGJ401" name="REST" docroot=""><con:settings/><con:properties/><con:onRequestScript/><con:restMockAction name="/api/jogos" method="GET" resourcePath="/api/jogos" id="8c7a3d67-3f1a-4dda-92e9-b95d58205f6a"><con:settings/><con:defaultResponse>Response</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+// Script dispatcher is used to select a response based on the incoming request.&#13;
+// Here are few examples showing how to match based on path, query param, header and body&#13;
+&#13;
+// Match based on path&#13;
+def requestPath = mockRequest.getPath()&#13;
+log.info "Path: "+ requestPath&#13;
+&#13;
+if( requestPath.contains("json") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "JSON Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on query parameter&#13;
+def queryString = mockRequest.getRequest().getQueryString()&#13;
+log.info "QueryString: " + queryString&#13;
+&#13;
+if( queryString.contains("stockholm") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response Stockholm"&#13;
+}&#13;
+else if( queryString.contains("london") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response London"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on header&#13;
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")&#13;
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList&#13;
+&#13;
+if( acceptEncodingHeaderList.contains("gzip,deflate") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "GZiped Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on body&#13;
+def requestBody = mockRequest.getRequestContent()&#13;
+log.info "Request body: " + requestBody&#13;
+&#13;
+if( requestBody.contains("some data") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response N"&#13;
+}&#13;
+*/&#13;
+</con:dispatchPath><con:response name="Response" id="c320c092-97c7-42cb-9414-f64c344f7196" httpResponseStatus="200" mediaType="application/xml"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<plataformaJogos>
+    <id_consumo>12345</id_consumo>
+    <usuario>
+        <id>17</id>
+        <jogos>
+            <jogo>
+                <id>1001</id>
+                <nome>God of War Ragnarok</nome>
+            </jogo>
+            <jogo>
+                <id>1002</id>
+                <nome>Red Dead Redemption 2</nome>
+            </jogo>
+            <jogo>
+                <id>1003</id>
+                <nome>The Last of Us Part II</nome>
+            </jogo>
+            <jogo>
+                <id>1004</id>
+                <nome>Elden Ring</nome>
+            </jogo>
+            <jogo>
+                <id>1005</id>
+                <nome>Cyberpunk 2077</nome>
+            </jogo>
+        </jogos>
+    </usuario>
+</plataformaJogos> ]]></con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
